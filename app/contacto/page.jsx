@@ -1,18 +1,23 @@
 import Button from "@/components/Button";
+import ContactForm from "@/components/ContactForm";
 
-const whatsappMessage =
-  "Hola Navix Labs, quiero optimizar rutas para mi empresa.%0A%0A" +
-  "Nombre:%0A" +
-  "Empresa:%0A" +
-  "Ciudad:%0A" +
-  "Cantidad de vehículos:%0A" +
-  "Cantidad aprox. de entregas diarias:%0A" +
-  "Rubro:%0A" +
-  "¿Tengo direcciones en Excel?: Sí / No%0A" +
-  "Principal problema actual:%0A";
+const whatsappMessage = encodeURIComponent(
+  `Hola Navix Labs, quiero optimizar rutas para mi empresa.
+
+Nombre:
+Empresa:
+Ciudad:
+Cantidad de vehículos:
+Cantidad aprox. de entregas diarias:
+Rubro:
+¿Tengo direcciones en Excel?: Sí / No
+Principal problema actual:`
+);
+
+const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
 
 export const metadata = {
-  title: "Contacto | Navix Labs",
+  title: "Diagnóstico de rutas | Navix Labs",
   description:
     "Solicita un diagnóstico express de rutas para reducir kilómetros, tiempo y desorden en operaciones de reparto.",
 };
@@ -25,93 +30,80 @@ export default function ContactoPage() {
           <p className="eyebrow">Diagnóstico de rutas</p>
           <h1>Envíanos tus datos y evaluamos tu operación de reparto.</h1>
           <p>
-            Para preparar una primera evaluación necesitamos información simple:
-            ciudad, cantidad de vehículos, cantidad aproximada de entregas y si
-            tienes una planilla con direcciones.
+            Puedes contactarnos por WhatsApp o completar el formulario. Para una
+            primera evaluación necesitamos ciudad, cantidad de vehículos,
+            entregas aproximadas y principal problema actual.
           </p>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container contactOptions">
-          <article className="contactCard">
-            <h3>Solicitar por WhatsApp</h3>
-            <p>
-              La forma más rápida de iniciar. El mensaje ya incluye una ficha
-              básica para que podamos entender tu operación.
-            </p>
-
-            <Button
-              href={`https://wa.me/56973860127?text=${whatsappMessage}`}
-              external
-            >
-              Enviar datos por WhatsApp
+          <div className="heroActions">
+            <Button href={whatsappUrl} external>
+              Escribir por WhatsApp
             </Button>
-          </article>
-
-          <article className="contactCard">
-            <h3>Enviar por correo</h3>
-            <p>
-              Recomendado si ya tienes planillas, direcciones o información más
-              detallada de tus repartos.
-            </p>
-
-            <Button
-              href="mailto:contacto@navixlabs.cl?subject=Diagnóstico%20de%20rutas%20Navix%20Labs&body=Hola%20Navix%20Labs%2C%0A%0AQuiero%20evaluar%20la%20optimización%20de%20rutas%20para%20mi%20empresa.%0A%0ANombre%3A%0AEmpresa%3A%0ACiudad%3A%0ACantidad%20de%20vehículos%3A%0ACantidad%20aprox.%20de%20entregas%20diarias%3A%0ARubro%3A%0A%C2%BFTengo%20direcciones%20en%20Excel%3F%3A%20S%C3%AD%20%2F%20No%0AProblema%20principal%3A%0A"
-              variant="secondary"
-              external
-            >
-              Enviar información por correo
-            </Button>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="card">
-            <p className="eyebrow">Qué necesitamos</p>
-            <h2>Mientras más claro el dato, mejor la ruta.</h2>
-
-            <div className="grid gridThree">
-              <article>
-                <h3>Direcciones</h3>
-                <p>
-                  Lista de clientes, puntos de entrega o ubicaciones visitadas
-                  durante una jornada.
-                </p>
-              </article>
-
-              <article>
-                <h3>Vehículos</h3>
-                <p>
-                  Cantidad de choferes, vehículos disponibles, capacidad y zonas
-                  habituales de reparto.
-                </p>
-              </article>
-
-              <article>
-                <h3>Restricciones</h3>
-                <p>
-                  Horarios, prioridades, entregas urgentes, zonas difíciles o
-                  condiciones especiales.
-                </p>
-              </article>
-            </div>
           </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container">
+        <div className="container grid gridTwo">
           <div className="card">
-            <p className="eyebrow">Ideal para</p>
-            <h2>Empresas que reparten o visitan múltiples direcciones.</h2>
+            <p className="eyebrow">Formulario</p>
+            <h2>Enviar solicitud de diagnóstico</h2>
             <p>
-              Distribuidoras, fletes, gas, agua, ferreterías, técnicos en
-              terreno, reparto local, servicios B2B y cualquier operación que
-              tenga vehículos moviéndose por la ciudad.
+              Usa este formulario si prefieres dejar tus datos sin abrir Outlook
+              o Gmail. La solicitud se enviará directamente para revisión.
             </p>
+
+            <ContactForm />
+          </div>
+
+          <div className="card">
+            <p className="eyebrow">Qué revisamos</p>
+            <h2>Datos mínimos para optimizar rutas</h2>
+
+            <div className="processList compactProcess">
+              <article className="processStep">
+                <span>01</span>
+                <div>
+                  <h3>Direcciones</h3>
+                  <p>
+                    Clientes, puntos de entrega o ubicaciones visitadas durante
+                    una jornada.
+                  </p>
+                </div>
+              </article>
+
+              <article className="processStep">
+                <span>02</span>
+                <div>
+                  <h3>Vehículos</h3>
+                  <p>
+                    Cantidad de choferes, vehículos disponibles y carga habitual
+                    de trabajo.
+                  </p>
+                </div>
+              </article>
+
+              <article className="processStep">
+                <span>03</span>
+                <div>
+                  <h3>Restricciones</h3>
+                  <p>
+                    Horarios, prioridades, zonas complicadas o entregas urgentes.
+                  </p>
+                </div>
+              </article>
+
+              <article className="processStep">
+                <span>04</span>
+                <div>
+                  <h3>Resultado</h3>
+                  <p>
+                    Rutas ordenadas, mapa, Excel operativo y comparación
+                    antes/después.
+                  </p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
