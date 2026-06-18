@@ -1,42 +1,46 @@
 export const services = [
   {
-    title: "Optimización de rutas",
+    title: "Diagnóstico express de rutas",
     description:
-      "Ordenamos entregas, visitas o servicios en terreno para reducir distancia recorrida, tiempos muertos y costos operativos.",
+      "Para empresas que quieren saber si están perdiendo kilómetros, tiempo o combustible en sus repartos diarios.",
     points: [
-      "Secuencia óptima de visitas",
-      "Asignación por vehículo o chofer",
-      "Comparación antes/después",
+      "Revisión de direcciones",
+      "Comparación operación actual vs optimizada",
+      "Estimación simple de ahorro",
+      "Resumen ejecutivo para decidir rápido",
     ],
   },
   {
-    title: "Planificación de flotas",
+    title: "Optimización de jornada",
     description:
-      "Diseñamos una operación más eficiente considerando capacidades, ventanas horarias, zonas y carga de trabajo.",
+      "Para empresas que tienen entregas de un día específico y necesitan ordenar rutas por chofer o vehículo.",
     points: [
-      "Balance de rutas",
-      "Utilización de vehículos",
-      "Control de entregas por zona",
-    ],
-  },
-  {
-    title: "Reportes ejecutivos",
-    description:
-      "Convertimos los resultados técnicos en reportes claros para tomar decisiones: kilómetros, tiempos, ahorro y productividad.",
-    points: [
-      "Excel de rutas",
+      "Rutas ordenadas por chofer",
+      "Secuencia recomendada de visitas",
       "Mapa interactivo",
-      "Métricas de ahorro",
+      "Excel operativo listo para usar",
     ],
   },
   {
-    title: "Automatización logística",
+    title: "Reporte antes/después",
     description:
-      "Estructuramos procesos repetitivos para que la operación sea más simple, rápida y medible.",
+      "Transformamos una planificación manual en números claros para mostrar distancia, tiempo y ahorro potencial.",
     points: [
-      "Carga de direcciones",
-      "Limpieza de datos",
-      "Preparación de reportes",
+      "Kilómetros actuales estimados",
+      "Kilómetros optimizados",
+      "Tiempo total de operación",
+      "Porcentaje de mejora",
+    ],
+  },
+  {
+    title: "Plan mensual de rutas",
+    description:
+      "Para empresas que reparten todas las semanas y necesitan una planificación recurrente más ordenada.",
+    points: [
+      "Optimización periódica",
+      "Reportes por jornada",
+      "Métricas de flota",
+      "Mejora continua de la operación",
     ],
   },
 ];
