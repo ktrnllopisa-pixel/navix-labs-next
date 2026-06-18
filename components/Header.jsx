@@ -3,9 +3,9 @@ import Button from "@/components/Button";
 
 const navItems = [
   { href: "/servicios", label: "Servicios" },
-  { href: "/soluciones", label: "Soluciones" },
-  { href: "/demo", label: "Demo" },
-  { href: "/metodologia", label: "Metodología" },
+  { href: "/demo", label: "Ejemplo" },
+  { href: "/metodologia", label: "Cómo funciona" },
+  { href: "/dashboard", label: "Reporte" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -29,8 +29,8 @@ export default function Header() {
         </nav>
 
         <div className="headerAction">
-          <Button href="/dashboard" variant="secondary">
-            Ver dashboard
+          <Button href="/contacto" variant="secondary">
+            Diagnóstico
           </Button>
         </div>
       </div>
