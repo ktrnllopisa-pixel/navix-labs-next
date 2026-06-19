@@ -1,46 +1,44 @@
 export const services = [
   {
+    tag: "Entrada rápida",
     title: "Diagnóstico express de rutas",
     description:
-      "Para empresas que quieren saber si están perdiendo kilómetros, tiempo o combustible en sus repartos diarios.",
-    points: [
+      "Para empresas que quieren saber si están perdiendo kilómetros, tiempo o combustible en su operación diaria.",
+    bestFor:
+      "Ideal si hoy armas rutas a mano y quieres una primera evaluación clara.",
+    deliverables: [
       "Revisión de direcciones",
-      "Comparación operación actual vs optimizada",
-      "Estimación simple de ahorro",
-      "Resumen ejecutivo para decidir rápido",
+      "Estimación de kilómetros actuales",
+      "Escenario optimizado referencial",
+      "Resumen ejecutivo de mejora",
     ],
   },
   {
+    tag: "Más solicitado",
     title: "Optimización de jornada",
     description:
       "Para empresas que tienen entregas de un día específico y necesitan ordenar rutas por chofer o vehículo.",
-    points: [
+    bestFor:
+      "Ideal para repartos diarios, distribución local, fletes o visitas en terreno.",
+    deliverables: [
       "Rutas ordenadas por chofer",
       "Secuencia recomendada de visitas",
-      "Mapa interactivo",
       "Excel operativo listo para usar",
+      "Comparación antes/después",
     ],
   },
   {
-    title: "Reporte antes/después",
-    description:
-      "Transformamos una planificación manual en números claros para mostrar distancia, tiempo y ahorro potencial.",
-    points: [
-      "Kilómetros actuales estimados",
-      "Kilómetros optimizados",
-      "Tiempo total de operación",
-      "Porcentaje de mejora",
-    ],
-  },
-  {
+    tag: "Operación recurrente",
     title: "Plan mensual de rutas",
     description:
-      "Para empresas que reparten todas las semanas y necesitan una planificación recurrente más ordenada.",
-    points: [
+      "Para empresas que reparten todas las semanas y necesitan mejorar su operación de forma constante.",
+    bestFor:
+      "Ideal si tu empresa tiene rutas frecuentes y quiere medir mejoras mes a mes.",
+    deliverables: [
       "Optimización periódica",
       "Reportes por jornada",
       "Métricas de flota",
-      "Mejora continua de la operación",
+      "Seguimiento de ahorro operativo",
     ],
   },
 ];
