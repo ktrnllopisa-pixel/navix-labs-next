@@ -1,33 +1,22 @@
 import Button from "@/components/Button";
 import DashboardMockup from "@/components/DashboardMockup";
 import MetricCard from "@/components/MetricCard";
-import ProcessStep from "@/components/ProcessStep";
-import ServiceCard from "@/components/ServiceCard";
 import { metrics } from "@/data/metrics";
-import { services } from "@/data/services";
 
-const process = [
-  {
-    number: "01",
-    title: "Envías tus direcciones",
-    text: "Puedes partir con una planilla, lista de clientes, puntos de entrega o rutas actuales usadas por tus choferes.",
-  },
-  {
-    number: "02",
-    title: "Ordenamos y analizamos la operación",
-    text: "Revisamos zonas, cantidad de vehículos, entregas diarias, tiempos estimados y restricciones básicas.",
-  },
-  {
-    number: "03",
-    title: "Calculamos una ruta optimizada",
-    text: "Proponemos un orden de visitas más eficiente para reducir kilómetros, tiempos muertos y desorden operativo.",
-  },
-  {
-    number: "04",
-    title: "Recibes mapa, Excel y métricas",
-    text: "Entregamos una salida clara: rutas por chofer, mapa visual, kilómetros, tiempo estimado y comparación antes/después.",
-  },
-];
+const whatsappMessage = encodeURIComponent(
+  `Hola Navix Labs, quiero optimizar rutas para mi empresa.
+
+Nombre:
+Empresa:
+Ciudad:
+Cantidad de vehículos:
+Cantidad aprox. de entregas diarias:
+Rubro:
+¿Tengo direcciones en Excel?: Sí / No
+Principal problema actual:`
+);
+
+const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
 
 export default function Home() {
   return (
@@ -43,33 +32,32 @@ export default function Home() {
             </h1>
 
             <p className="lead">
-              Navix Labs ayuda a empresas con entregas, reparto local o visitas
-              en terreno a transformar una lista de direcciones en rutas
+              En Navix Labs transformamos una lista de direcciones en rutas
               ordenadas por chofer, mapa interactivo, Excel operativo y métricas
-              claras de ahorro.
+              simples para decidir mejor.
             </p>
 
             <div className="heroActions">
-              <Button href="/contacto">Solicitar diagnóstico de rutas</Button>
-              <Button href="/demo" variant="secondary">
-                Ver ejemplo antes/después
+              <Button href="/contacto">Solicitar diagnóstico</Button>
+              <Button href={whatsappUrl} variant="secondary" external>
+                Escribir por WhatsApp
               </Button>
             </div>
 
             <div className="heroStats">
               <div className="statPill">
                 <strong>48h</strong>
-                <span>para una evaluación inicial</span>
+                <span>evaluación inicial</span>
+              </div>
+
+              <div className="statPill">
+                <strong>Excel + mapa</strong>
+                <span>entrega operativa</span>
               </div>
 
               <div className="statPill">
                 <strong>-45 km</strong>
                 <span>ahorro en escenario demo</span>
-              </div>
-
-              <div className="statPill">
-                <strong>Excel + mapa</strong>
-                <span>entrega clara para operar</span>
               </div>
             </div>
           </div>
@@ -81,40 +69,36 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="sectionHeader">
-            <p className="eyebrow">Problema</p>
-            <h2>
-              Muchas empresas reparten todos los días, pero siguen armando rutas
-              a mano.
-            </h2>
+            <p className="eyebrow">Qué hacemos</p>
+            <h2>Ordenamos rutas para empresas que reparten o visitan múltiples direcciones.</h2>
             <p>
-              Cuando las rutas se ordenan por intuición, costumbre o urgencia,
-              se pierden kilómetros, combustible, horas de trabajo y capacidad
-              real de la flota.
+              El objetivo es simple: menos vueltas, menos kilómetros, mejor uso
+              de la flota y una operación más clara para el dueño o encargado.
             </p>
           </div>
 
           <div className="grid gridThree">
             <article className="card">
-              <h3>Choferes sobrecargados</h3>
+              <h3>Recibimos tus direcciones</h3>
               <p>
-                Algunas rutas quedan demasiado largas mientras otros vehículos
-                quedan con menor carga o recorridos poco eficientes.
+                Puedes partir con una planilla, lista de clientes o rutas que ya
+                usan tus choferes.
               </p>
             </article>
 
             <article className="card">
-              <h3>Kilómetros innecesarios</h3>
+              <h3>Calculamos rutas más eficientes</h3>
               <p>
-                Visitas mal ordenadas generan vueltas, cruces de zona y más
-                gasto en combustible.
+                Ordenamos visitas y asignaciones para reducir kilómetros,
+                cruces de zona y tiempos muertos.
               </p>
             </article>
 
             <article className="card">
-              <h3>Poca visibilidad</h3>
+              <h3>Entregamos un resultado claro</h3>
               <p>
-                Sin métricas, es difícil saber si la operación está mejorando o
-                si cada día se está perdiendo dinero.
+                Recibes rutas por chofer, mapa, Excel y comparación
+                antes/después.
               </p>
             </article>
           </div>
@@ -124,14 +108,11 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="sectionHeader">
-            <p className="eyebrow">Ejemplo antes/después</p>
-            <h2>
-              La diferencia entre repartir “como siempre” y repartir con rutas
-              ordenadas.
-            </h2>
+            <p className="eyebrow">Ejemplo rápido</p>
+            <h2>Una muestra simple de lo que se puede medir.</h2>
             <p>
-              Este escenario de referencia muestra cómo una operación puede
-              reducir distancia recorrida al reorganizar visitas y asignaciones.
+              El detalle completo está en la sección Ejemplo. En el inicio solo
+              mostramos los indicadores principales.
             </p>
           </div>
 
@@ -145,114 +126,12 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="sectionHeader">
-            <p className="eyebrow">Qué vendemos</p>
-            <h2>Servicios simples para mejorar tus rutas sin complicarte.</h2>
-            <p>
-              No necesitas implementar un sistema complejo desde el primer día.
-              Puedes empezar con tus direcciones actuales y recibir una salida
-              operativa clara.
-            </p>
-          </div>
-
-          <div className="grid gridTwo">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.title}
-                title={service.title}
-                description={service.description}
-                points={service.points}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="sectionHeader">
-            <p className="eyebrow">Qué recibe el cliente</p>
-            <h2>Una entrega útil, no un informe difícil de entender.</h2>
-            <p>
-              La idea es que el dueño, administrador o encargado de operaciones
-              pueda usar los resultados sin saber de programación ni modelos
-              matemáticos.
-            </p>
-          </div>
-
-          <div className="grid gridThree">
-            <article className="card">
-              <h3>Rutas por chofer</h3>
-              <p>
-                Orden recomendado de visitas para cada vehículo o persona en
-                terreno.
-              </p>
-            </article>
-
-            <article className="card">
-              <h3>Mapa interactivo</h3>
-              <p>
-                Visualización de las rutas para entender zonas, recorridos y
-                distribución territorial.
-              </p>
-            </article>
-
-            <article className="card">
-              <h3>Excel operativo</h3>
-              <p>
-                Archivo claro con direcciones, orden de visita, chofer asignado,
-                kilómetros y tiempos estimados.
-              </p>
-            </article>
-
-            <article className="card">
-              <h3>Comparación antes/después</h3>
-              <p>
-                Métricas simples para mostrar cuánto mejora la operación frente
-                al escenario inicial.
-              </p>
-            </article>
-
-            <article className="card">
-              <h3>Ahorro estimado</h3>
-              <p>
-                Estimación de reducción de distancia, tiempo y combustible según
-                los datos disponibles.
-              </p>
-            </article>
-
-            <article className="card">
-              <h3>Resumen ejecutivo</h3>
-              <p>
-                Explicación corta para tomar decisiones sin entrar en detalles
-                técnicos.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="sectionHeader">
-            <p className="eyebrow">Proceso</p>
-            <h2>Cómo funciona el diagnóstico de rutas.</h2>
-          </div>
-
-          <div className="processList">
-            {process.map((step) => (
-              <ProcessStep
-                key={step.number}
-                number={step.number}
-                title={step.title}
-                text={step.text}
-              />
-            ))}
+          <div className="heroActions">
+            <Button href="/demo">Ver ejemplo completo</Button>
+            <Button href="/dashboard" variant="secondary">
+              Ver reporte demo
+            </Button>
           </div>
         </div>
       </section>
@@ -260,18 +139,17 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="card">
-            <p className="eyebrow">Próximo paso</p>
-            <h2>Envía tus direcciones y evaluamos si puedes ahorrar kilómetros.</h2>
+            <p className="eyebrow">Siguiente paso</p>
+            <h2>Envíanos tus datos y vemos si tus rutas pueden mejorar.</h2>
             <p>
-              Para comenzar basta con saber cuántas entregas haces, cuántos
-              vehículos tienes, en qué ciudad operas y si cuentas con una
-              planilla de direcciones.
+              Para comenzar necesitamos ciudad, cantidad de vehículos, cantidad
+              aproximada de entregas y si tienes direcciones en Excel.
             </p>
 
             <div className="heroActions">
-              <Button href="/contacto">Solicitar diagnóstico</Button>
-              <Button href="/demo" variant="secondary">
-                Ver ejemplo de resultado
+              <Button href="/contacto">Completar formulario</Button>
+              <Button href={whatsappUrl} variant="secondary" external>
+                Escribir por WhatsApp
               </Button>
             </div>
           </div>
