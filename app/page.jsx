@@ -18,8 +18,8 @@ const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
 export default function Home() {
   return (
     <main className="homePage">
-      <section className="homeHeroClean">
-        <div className="container homeHeroCleanGrid">
+      <section className="homeHero">
+        <div className="container homeHeroGrid">
           <div className="homeHeroText">
             <p className="eyebrow">Optimización express de rutas</p>
 
@@ -31,14 +31,14 @@ export default function Home() {
               desorden.
             </p>
 
-            <div className="homeHeroActions">
+            <div className="homeActions">
               <Button href="/contacto">Solicitar diagnóstico</Button>
               <Button href={whatsappUrl} variant="secondary" external>
                 WhatsApp
               </Button>
             </div>
 
-            <span className="homeHint">
+            <span className="homeNote">
               Para reparto local, distribución, fletes, técnicos en terreno y
               empresas con múltiples direcciones diarias.
             </span>
@@ -61,7 +61,7 @@ export default function Home() {
                 <strong>97 km</strong>
               </div>
 
-              <div className="homeResultHighlight">
+              <div className="highlight">
                 <span>Ahorro estimado</span>
                 <strong>-45 km</strong>
               </div>
@@ -74,9 +74,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="homeProcessSection">
+      <section className="homeProcess">
         <div className="container">
-          <div className="homeSectionTitle">
+          <div className="homeSectionHeader">
             <p className="eyebrow">Cómo funciona</p>
             <h2>Un proceso simple para ordenar tus rutas.</h2>
           </div>
@@ -103,9 +103,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="homeFinalCtaSection">
+      <section className="homeCtaSection">
         <div className="container">
-          <div className="homeFinalCta">
+          <div className="homeCta">
             <div>
               <p className="eyebrow">Siguiente paso</p>
               <h2>Veamos si tus rutas pueden mejorar.</h2>
@@ -115,7 +115,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="homeHeroActions">
+            <div className="homeActions">
               <Button href="/contacto">Completar formulario</Button>
               <Button href={whatsappUrl} variant="secondary" external>
                 Escribir por WhatsApp
