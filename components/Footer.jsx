@@ -1,5 +1,20 @@
 import Link from "next/link";
 
+const whatsappMessage = encodeURIComponent(
+  `Hola Navix Labs, quiero optimizar rutas para mi empresa.
+
+Nombre:
+Empresa:
+Ciudad:
+Cantidad de vehículos:
+Cantidad aprox. de entregas diarias:
+Rubro:
+¿Tengo direcciones en Excel?: Sí / No
+Principal problema actual:`
+);
+
+const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
+
 export default function Footer() {
   return (
     <footer className="siteFooter">
@@ -9,41 +24,37 @@ export default function Footer() {
             NAVIX <span>LABS</span>
           </Link>
           <p>
-            Optimización logística, rutas inteligentes y herramientas digitales
-            para empresas con operaciones en terreno.
+            Optimización express de rutas para empresas con reparto, visitas en
+            terreno y operaciones con múltiples direcciones.
           </p>
         </div>
 
         <div>
-          <h4>Empresa</h4>
+          <h4>Rutas</h4>
           <Link href="/servicios">Servicios</Link>
-          <Link href="/soluciones">Soluciones</Link>
-          <Link href="/metodologia">Metodología</Link>
+          <Link href="/demo">Ejemplo antes/después</Link>
+          <Link href="/metodologia">Cómo funciona</Link>
         </div>
 
         <div>
-          <h4>Producto</h4>
-          <Link href="/demo">Demo</Link>
-          <Link href="/dashboard">Dashboard</Link>
+          <h4>Entrega</h4>
+          <Link href="/dashboard">Reporte demo</Link>
           <Link href="/casos">Casos de uso</Link>
+          <Link href="/soluciones">Empresas objetivo</Link>
         </div>
 
         <div>
           <h4>Contacto</h4>
-          <a href="mailto:contacto@navixlabs.cl">contacto@navixlabs.cl</a>
-          <a
-            href="https://wa.me/569XXXXXXXX?text=Hola%20Navix%20Labs%2C%20quiero%20consultar%20por%20optimización%20logística."
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp
+          <Link href="/contacto">Formulario de diagnóstico</Link>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer">
+            WhatsApp directo
           </a>
         </div>
       </div>
 
       <div className="container footerBottom">
         <span>© 2026 Navix Labs. Todos los derechos reservados.</span>
-        <span>Desarrollado para operaciones logísticas modernas.</span>
+        <span>Menos kilómetros. Más orden. Mejores rutas.</span>
       </div>
     </footer>
   );
