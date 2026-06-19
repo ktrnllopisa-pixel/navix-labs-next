@@ -753,3 +753,18 @@ img {
     width: 100%;
   }
 }
+
+.formSuccess {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: #d8ffe8;
+  background: rgba(98, 240, 181, 0.12);
+  border: 1px solid rgba(98, 240, 181, 0.28);
+}
+
+.formActions button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
