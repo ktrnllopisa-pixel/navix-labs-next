@@ -1,12 +1,12 @@
 import Button from "@/components/Button";
-import DashboardMockup from "@/components/DashboardMockup";
 import MetricCard from "@/components/MetricCard";
+import ResultsPreview from "@/components/ResultsPreview";
 import { metrics } from "@/data/metrics";
 
 export const metadata = {
-  title: "Demo | Navix Labs",
+  title: "Ejemplo | Navix Labs",
   description:
-    "Demo visual de optimización logística con comparación antes/después, rutas y métricas operativas.",
+    "Ejemplo de optimización de rutas con comparación antes/después y entrega operativa.",
 };
 
 export default function DemoPage() {
@@ -14,12 +14,11 @@ export default function DemoPage() {
     <main>
       <section className="pageHero">
         <div className="container">
-          <p className="eyebrow">Demo operativa</p>
-          <h1>Una vista clara de cómo se transforma una operación logística.</h1>
+          <p className="eyebrow">Ejemplo antes/después</p>
+          <h1>Una forma simple de visualizar la mejora de una ruta.</h1>
           <p>
-            Este escenario muestra cómo Navix Labs puede comparar una operación
-            inicial contra una propuesta optimizada, usando métricas simples:
-            kilómetros, tiempo, entregas, choferes y ahorro estimado.
+            Esta sección muestra un escenario de referencia para entender cómo
+            se comparan una jornada manual y una jornada optimizada.
           </p>
         </div>
       </section>
@@ -31,8 +30,8 @@ export default function DemoPage() {
             <h3>Planificación manual</h3>
             <strong>142 km</strong>
             <p>
-              Rutas armadas sin optimización, mayor recorrido, más tiempo en
-              terreno y menor visibilidad operativa.
+              Más recorrido, menos claridad sobre la carga de trabajo y menor
+              control operativo.
             </p>
           </div>
 
@@ -41,8 +40,8 @@ export default function DemoPage() {
             <h3>Ruta optimizada</h3>
             <strong>97 km</strong>
             <p>
-              Rutas ordenadas, mejor asignación de choferes y reducción
-              estimada de kilómetros recorridos.
+              Visitas mejor ordenadas, mejor distribución por chofer y menos
+              kilómetros recorridos.
             </p>
           </div>
         </div>
@@ -50,7 +49,7 @@ export default function DemoPage() {
 
       <section className="section">
         <div className="container">
-          <DashboardMockup />
+          <ResultsPreview />
         </div>
       </section>
 
@@ -72,19 +71,15 @@ export default function DemoPage() {
       <section className="section">
         <div className="container">
           <div className="card">
-            <p className="eyebrow">Nota</p>
-            <h2>La demo representa un escenario de referencia.</h2>
+            <p className="eyebrow">Importante</p>
+            <h2>El ejemplo es referencial.</h2>
             <p>
-              Los resultados reales dependen de direcciones, tráfico, horarios,
-              restricciones, capacidades de vehículos y reglas de cada empresa.
-              Navix Labs permite adaptar el análisis a cada operación.
+              El resultado real depende de tus direcciones, horarios,
+              restricciones, vehículos y forma actual de operación.
             </p>
 
             <div className="heroActions">
-              <Button href="/contacto">Solicitar demo personalizada</Button>
-              <Button href="/dashboard" variant="secondary">
-                Ver dashboard
-              </Button>
+              <Button href="/contacto">Solicitar diagnóstico</Button>
             </div>
           </div>
         </div>
