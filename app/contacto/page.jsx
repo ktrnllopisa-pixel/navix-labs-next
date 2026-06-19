@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import ContactForm from "@/components/ContactForm";
 
 const whatsappMessage = encodeURIComponent(
-  `Hola Navix Labs, quiero optimizar rutas para mi empresa.
+  `Hola Navix Labs, quiero solicitar un diagnóstico de rutas.
 
 Nombre:
 Empresa:
@@ -19,92 +19,119 @@ const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
 export const metadata = {
   title: "Diagnóstico de rutas | Navix Labs",
   description:
-    "Solicita un diagnóstico express de rutas para reducir kilómetros, tiempo y desorden en operaciones de reparto.",
+    "Solicita un diagnóstico de rutas para evaluar kilómetros, horarios, flota, entregas y oportunidades de mejora operativa.",
 };
 
 export default function ContactoPage() {
   return (
-    <main>
-      <section className="pageHero">
-        <div className="container">
-          <p className="eyebrow">Diagnóstico de rutas</p>
-          <h1>Envíanos tus datos y evaluamos tu operación de reparto.</h1>
-          <p>
-            Puedes contactarnos por WhatsApp o completar el formulario. Para una
-            primera evaluación necesitamos ciudad, cantidad de vehículos,
-            entregas aproximadas y principal problema actual.
-          </p>
+    <main className="contactPage">
+      <section className="contactHero">
+        <div className="container contactHeroGrid">
+          <div>
+            <p className="eyebrow">Diagnóstico de rutas</p>
 
-          <div className="heroActions">
-            <Button href={whatsappUrl} external>
+            <h1>Cuéntanos cómo opera tu reparto y evaluamos tus rutas.</h1>
+
+            <p>
+              Completa los datos mínimos de tu operación: ciudad, vehículos,
+              entregas, horarios y principales problemas actuales. Con eso
+              podemos revisar si existe oportunidad de reducir kilómetros,
+              ordenar mejor la flota y mejorar la planificación.
+            </p>
+          </div>
+
+          <aside className="contactHeroCard">
+            <span>Respuesta inicial</span>
+            <strong>24–48 h</strong>
+            <p>
+              Revisamos tu información y te contactamos para pedir detalles o
+              coordinar una primera evaluación.
+            </p>
+
+            <Button href={whatsappUrl} variant="secondary" external>
               Escribir por WhatsApp
             </Button>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container grid gridTwo">
-          <div className="card">
+      <section className="contactSection">
+        <div className="container contactLayout">
+          <div className="contactFormCard">
             <p className="eyebrow">Formulario</p>
             <h2>Enviar solicitud de diagnóstico</h2>
             <p>
-              Usa este formulario si prefieres dejar tus datos sin abrir Outlook
-              o Gmail. La solicitud se enviará directamente para revisión.
+              Este formulario se envía directamente desde la página. No abre
+              Outlook, Gmail ni otra aplicación externa.
             </p>
 
             <ContactForm />
           </div>
 
-          <div className="card">
-            <p className="eyebrow">Qué revisamos</p>
-            <h2>Datos mínimos para optimizar rutas</h2>
+          <aside className="contactInfoPanel">
+            <div className="contactInfoBlock">
+              <p className="eyebrow">Qué necesitamos</p>
+              <h2>Datos mínimos para una primera evaluación</h2>
 
-            <div className="processList compactProcess">
-              <article className="processStep">
-                <span>01</span>
-                <div>
-                  <h3>Direcciones</h3>
-                  <p>
-                    Clientes, puntos de entrega o ubicaciones visitadas durante
-                    una jornada.
-                  </p>
-                </div>
-              </article>
+              <div className="contactChecklist">
+                <article>
+                  <span>01</span>
+                  <div>
+                    <h3>Operación</h3>
+                    <p>
+                      Ciudad, rubro, cantidad de vehículos y número aproximado
+                      de entregas.
+                    </p>
+                  </div>
+                </article>
 
-              <article className="processStep">
-                <span>02</span>
-                <div>
-                  <h3>Vehículos</h3>
-                  <p>
-                    Cantidad de choferes, vehículos disponibles y carga habitual
-                    de trabajo.
-                  </p>
-                </div>
-              </article>
+                <article>
+                  <span>02</span>
+                  <div>
+                    <h3>Restricciones</h3>
+                    <p>
+                      Horarios de atención, prioridades, zonas complejas o
+                      clientes críticos.
+                    </p>
+                  </div>
+                </article>
 
-              <article className="processStep">
-                <span>03</span>
-                <div>
-                  <h3>Restricciones</h3>
-                  <p>
-                    Horarios, prioridades, zonas complicadas o entregas urgentes.
-                  </p>
-                </div>
-              </article>
-
-              <article className="processStep">
-                <span>04</span>
-                <div>
-                  <h3>Resultado</h3>
-                  <p>
-                    Rutas ordenadas, mapa, Excel operativo y comparación
-                    antes/después.
-                  </p>
-                </div>
-              </article>
+                <article>
+                  <span>03</span>
+                  <div>
+                    <h3>Direcciones</h3>
+                    <p>
+                      Puedes comenzar sin Excel. Si ya tienes una planilla,
+                      mejoramos la evaluación.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
-          </div>
+
+            <div className="contactNextSteps">
+              <p className="eyebrow">Después del envío</p>
+
+              <div className="nextStep">
+                <strong>1. Revisamos tu caso</strong>
+                <span>Validamos si tiene sentido optimizar la operación.</span>
+              </div>
+
+              <div className="nextStep">
+                <strong>2. Pedimos datos faltantes</strong>
+                <span>
+                  Si falta información, te pedimos planilla, zonas u horarios.
+                </span>
+              </div>
+
+              <div className="nextStep">
+                <strong>3. Preparamos una propuesta</strong>
+                <span>
+                  Te indicamos qué podríamos entregar y con qué alcance.
+                </span>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
     </main>
