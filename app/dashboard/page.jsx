@@ -1,11 +1,10 @@
-import DashboardMockup from "@/components/DashboardMockup";
-import MetricCard from "@/components/MetricCard";
-import { metrics } from "@/data/metrics";
+import Button from "@/components/Button";
+import ResultsPreview from "@/components/ResultsPreview";
 
 export const metadata = {
-  title: "Dashboard | Navix Labs",
+  title: "Entrega | Navix Labs",
   description:
-    "Vista dashboard de métricas logísticas, rutas optimizadas, flota y ahorro operativo.",
+    "Vista de entrega operativa: resumen, rutas por chofer y métricas claras para el cliente.",
 };
 
 export default function DashboardPage() {
@@ -13,62 +12,64 @@ export default function DashboardPage() {
     <main>
       <section className="pageHero">
         <div className="container">
-          <p className="eyebrow">Dashboard demo</p>
-          <h1>Panel operativo para visualizar rutas, flota y métricas de ahorro.</h1>
+          <p className="eyebrow">Entrega</p>
+          <h1>Así se ve una entrega clara para el cliente.</h1>
           <p>
-            Esta vista representa el tipo de panel que Navix Labs puede
-            desarrollar para convertir rutas y direcciones en información útil
-            para la toma de decisiones.
+            En vez de mostrar un dashboard complejo, preferimos una salida
+            simple y entendible: resumen operativo, asignación por chofer y
+            métricas principales.
           </p>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <DashboardMockup />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="grid gridFour">
-            {metrics.map((metric) => (
-              <MetricCard
-                key={metric.label}
-                value={metric.value}
-                label={metric.label}
-                detail={metric.detail}
-              />
-            ))}
-          </div>
+          <ResultsPreview />
         </div>
       </section>
 
       <section className="section">
         <div className="container grid gridThree">
           <article className="card">
-            <h3>Rutas por chofer</h3>
+            <h3>Resumen ejecutivo</h3>
             <p>
-              Visualización de entregas asignadas, kilómetros estimados y tiempo
-              total por vehículo.
+              Una vista breve para entender rápidamente qué cambió y dónde está
+              la mejora.
             </p>
           </article>
 
           <article className="card">
-            <h3>Indicadores ejecutivos</h3>
+            <h3>Asignación operativa</h3>
             <p>
-              Métricas de ahorro, utilización de flota, entregas realizadas y
-              comparación contra operación base.
+              Distribución por chofer o vehículo para que la jornada sea más
+              clara y aplicable.
             </p>
           </article>
 
           <article className="card">
-            <h3>Escalabilidad</h3>
+            <h3>Documento utilizable</h3>
             <p>
-              La vista puede evolucionar hacia un portal privado con datos de
-              clientes, histórico de rutas y reportes descargables.
+              La entrega busca ser práctica: clara para el dueño, para la
+              administración y para quien ejecuta la ruta.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="card">
+            <p className="eyebrow">Siguiente paso</p>
+            <h2>Podemos preparar una entrega basada en tus propios datos.</h2>
+            <p>
+              Si tienes direcciones, vehículos y una operación diaria o semanal,
+              podemos evaluar una primera versión para tu empresa.
+            </p>
+
+            <div className="heroActions">
+              <Button href="/contacto">Solicitar diagnóstico</Button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
