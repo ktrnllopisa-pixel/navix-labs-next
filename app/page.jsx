@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import MetricCard from "@/components/MetricCard";
-import ResultsPreview from "@/components/ResultsPreview";
 import { metrics } from "@/data/metrics";
 
 const whatsappMessage = encodeURIComponent(
@@ -27,14 +26,13 @@ export default function Home() {
             <p className="eyebrow">Optimización express de rutas</p>
 
             <h1 className="displayTitle">
-              Reduce kilómetros, tiempo y desorden en tus{" "}
-              <span>rutas de reparto.</span>
+              Rutas más cortas, ordenadas y fáciles de operar.
             </h1>
 
             <p className="lead">
-              Transformamos una lista de direcciones en rutas ordenadas por
-              chofer, resumen operativo, Excel claro y métricas simples para
-              tomar decisiones.
+              Navix Labs convierte listas de direcciones en rutas por chofer,
+              Excel operativo y métricas simples para reducir kilómetros,
+              tiempo y desorden en repartos.
             </p>
 
             <div className="heroActions">
@@ -51,29 +49,64 @@ export default function Home() {
               </div>
 
               <div className="statPill">
-                <strong>Excel + resumen</strong>
-                <span>entrega clara</span>
+                <strong>Excel</strong>
+                <span>rutas listas para operar</span>
               </div>
 
               <div className="statPill">
                 <strong>-31%</strong>
-                <span>escenario de referencia</span>
+                <span>escenario referencial</span>
               </div>
             </div>
           </div>
 
-          <ResultsPreview />
+          <aside className="heroProofCard">
+            <div className="proofHeader">
+              <span>Ejemplo de mejora</span>
+              <strong>Ruta diaria optimizada</strong>
+            </div>
+
+            <div className="proofComparison">
+              <div>
+                <span>Antes</span>
+                <strong>142 km</strong>
+              </div>
+
+              <div>
+                <span>Después</span>
+                <strong>97 km</strong>
+              </div>
+            </div>
+
+            <div className="proofSavings">
+              <span>Ahorro estimado</span>
+              <strong>-45 km</strong>
+              <p>
+                Menos distancia recorrida al ordenar entregas y asignaciones por
+                chofer.
+              </p>
+            </div>
+
+            <div className="proofDeliverables">
+              <span>Entrega al cliente</span>
+              <ul>
+                <li>Rutas por chofer</li>
+                <li>Excel operativo</li>
+                <li>Comparación antes/después</li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section sectionCompact">
         <div className="container">
           <div className="sectionHeader">
             <p className="eyebrow">Qué hacemos</p>
             <h2>Una mejora concreta para empresas que trabajan con rutas.</h2>
             <p>
-              Navix Labs está pensado para operaciones reales: reparto local,
-              técnicos en terreno, distribución y múltiples visitas diarias.
+              Pensado para reparto local, técnicos en terreno, distribución y
+              operaciones con múltiples direcciones diarias.
             </p>
           </div>
 
@@ -82,37 +115,37 @@ export default function Home() {
               <h3>Recibimos tus datos</h3>
               <p>
                 Puedes partir con una planilla de direcciones, lista de clientes
-                o descripción simple de tu operación.
+                o rutas actuales.
               </p>
             </article>
 
             <article className="card">
-              <h3>Calculamos una mejor ruta</h3>
+              <h3>Ordenamos la operación</h3>
               <p>
-                Ordenamos visitas y asignaciones para reducir vueltas, cruces de
-                zona y kilómetros innecesarios.
+                Revisamos vehículos, entregas, zonas y recorridos para proponer
+                una ruta más eficiente.
               </p>
             </article>
 
             <article className="card">
               <h3>Entregamos resultado útil</h3>
               <p>
-                Recibes un resultado claro para operar: resumen, asignación,
-                tabla de trabajo y comparación.
+                Rutas por chofer, Excel operativo, resumen de métricas y
+                comparación simple.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section sectionCompact">
         <div className="container">
           <div className="sectionHeader">
-            <p className="eyebrow">Ejemplo rápido</p>
-            <h2>Indicadores simples que muestran el impacto.</h2>
+            <p className="eyebrow">Impacto</p>
+            <h2>Indicadores simples para entender la mejora.</h2>
             <p>
-              El detalle completo está en la sección Ejemplo. Aquí solo dejamos
-              los números más importantes.
+              El ejemplo completo está en la sección “Ejemplo”. En el inicio
+              solo mostramos los números principales.
             </p>
           </div>
 
@@ -129,14 +162,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section sectionCompact">
         <div className="container">
-          <div className="card">
+          <div className="card ctaCard">
             <p className="eyebrow">Siguiente paso</p>
             <h2>Envíanos tus datos y evaluamos si tus rutas pueden mejorar.</h2>
             <p>
-              Para comenzar necesitamos ciudad, cantidad de vehículos,
-              entregas aproximadas y principal problema actual.
+              Para comenzar necesitamos ciudad, cantidad de vehículos, entregas
+              aproximadas y principal problema actual.
             </p>
 
             <div className="heroActions">
