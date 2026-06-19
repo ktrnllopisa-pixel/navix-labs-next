@@ -1,36 +1,70 @@
-export default function ContactForm() {
-  return (
-    <form
-      className="contactForm"
-      action="https://formsubmit.co/contacto@navixlabs.cl"
-      method="POST"
-    >
-      <input
-        type="hidden"
-        name="_subject"
-        value="Nueva solicitud de diagnóstico de rutas - Navix Labs"
-      />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://navixlabs.cl/gracias" />
-      <input
-        type="text"
-        name="_honey"
-        className="hiddenInput"
-        tabIndex="-1"
-        autoComplete="off"
-      />
+"use client";
 
+import { useState } from "react";
+
+export default function ContactForm() {
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      nombre: String(formData.get("nombre") || "").trim(),
+      empresa: String(formData.get("empresa") || "").trim(),
+      ciudad: String(formData.get("ciudad") || "").trim(),
+      rubro: String(formData.get("rubro") || "").trim(),
+      vehiculos: String(formData.get("vehiculos") || "").trim(),
+      entregas: String(formData.get("entregas") || "").trim(),
+      excel: String(formData.get("excel") || "").trim(),
+      telefono: String(formData.get("telefono") || "").trim(),
+      problema: String(formData.get("problema") || "").trim(),
+    };
+
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setStatus("error");
+        setMessage(result.message || "No se pudo enviar la solicitud.");
+        return;
+      }
+
+      setStatus("success");
+      setMessage("Solicitud enviada correctamente. Te contactaremos pronto.");
+      form.reset();
+    } catch (error) {
+      setStatus("error");
+      setMessage("No se pudo enviar la solicitud. Intenta nuevamente.");
+    }
+  }
+
+  return (
+    <form className="contactForm" onSubmit={handleSubmit}>
       <div className="formGrid">
         <label>
           Nombre
-          <input name="Nombre" type="text" placeholder="Tu nombre" required />
+          <input name="nombre" type="text" placeholder="Tu nombre" required />
         </label>
 
         <label>
           Empresa
           <input
-            name="Empresa"
+            name="empresa"
             type="text"
             placeholder="Nombre de la empresa"
             required
@@ -40,7 +74,7 @@ export default function ContactForm() {
         <label>
           Ciudad
           <input
-            name="Ciudad"
+            name="ciudad"
             type="text"
             placeholder="Ej: Antofagasta"
             required
@@ -50,7 +84,7 @@ export default function ContactForm() {
         <label>
           Rubro
           <input
-            name="Rubro"
+            name="rubro"
             type="text"
             placeholder="Ej: reparto, gas, agua, fletes"
           />
@@ -59,7 +93,7 @@ export default function ContactForm() {
         <label>
           Cantidad de vehículos
           <input
-            name="Cantidad de vehículos"
+            name="vehiculos"
             type="text"
             placeholder="Ej: 2, 4, 8"
             required
@@ -69,7 +103,7 @@ export default function ContactForm() {
         <label>
           Entregas diarias aproximadas
           <input
-            name="Cantidad aproximada de entregas diarias"
+            name="entregas"
             type="text"
             placeholder="Ej: 20 entregas diarias"
             required
@@ -78,7 +112,7 @@ export default function ContactForm() {
 
         <label>
           ¿Tiene direcciones en Excel?
-          <select name="¿Tiene direcciones en Excel?" defaultValue="">
+          <select name="excel" defaultValue="">
             <option value="" disabled>
               Selecciona una opción
             </option>
@@ -91,7 +125,7 @@ export default function ContactForm() {
         <label>
           Teléfono o WhatsApp
           <input
-            name="Teléfono o WhatsApp"
+            name="telefono"
             type="text"
             placeholder="Ej: +56 9..."
           />
@@ -101,21 +135,31 @@ export default function ContactForm() {
       <label>
         Principal problema actual
         <textarea
-          name="Problema principal"
+          name="problema"
           rows="6"
           placeholder="Ej: mis choferes se cruzan, perdemos mucho tiempo, no sabemos cuántos km hacemos, las rutas se arman a mano..."
         />
       </label>
 
+      {message && (
+        <p className={status === "success" ? "formSuccess" : "formError"}>
+          {message}
+        </p>
+      )}
+
       <div className="formActions">
-        <button className="btn btn-primary" type="submit">
-          Enviar solicitud por formulario
+        <button
+          className="btn btn-primary"
+          type="submit"
+          disabled={status === "loading"}
+        >
+          {status === "loading" ? "Enviando..." : "Enviar solicitud"}
         </button>
       </div>
 
       <p className="formNote">
-        Este formulario no abre Outlook ni Gmail. La solicitud se envía
-        directamente a Navix Labs.
+        La solicitud se envía directamente desde esta página. No se abrirá
+        Outlook, Gmail ni una pantalla externa de confirmación.
       </p>
     </form>
   );
