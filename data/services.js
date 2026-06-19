@@ -1,11 +1,11 @@
 export const services = [
   {
     tag: "Entrada rápida",
-    title: "Diagnóstico express de rutas",
+    title: "Diagnóstico express",
     description:
-      "Para empresas que quieren saber si están perdiendo kilómetros, tiempo o combustible en su operación diaria.",
+      "Una primera evaluación para saber si tu operación está perdiendo kilómetros, tiempo o combustible.",
     bestFor:
-      "Ideal si hoy armas rutas a mano y quieres una primera evaluación clara.",
+      "Para empresas que arman rutas a mano y necesitan claridad antes de invertir más.",
     deliverables: [
       "Revisión de direcciones",
       "Estimación de kilómetros actuales",
@@ -17,9 +17,9 @@ export const services = [
     tag: "Más solicitado",
     title: "Optimización de jornada",
     description:
-      "Para empresas que tienen entregas de un día específico y necesitan ordenar rutas por chofer o vehículo.",
+      "Ordenamos las entregas de un día específico por chofer o vehículo, con una salida clara para operar.",
     bestFor:
-      "Ideal para repartos diarios, distribución local, fletes o visitas en terreno.",
+      "Para reparto diario, distribución local, fletes o visitas en terreno.",
     deliverables: [
       "Rutas ordenadas por chofer",
       "Secuencia recomendada de visitas",
@@ -29,11 +29,11 @@ export const services = [
   },
   {
     tag: "Operación recurrente",
-    title: "Plan mensual de rutas",
+    title: "Plan mensual",
     description:
-      "Para empresas que reparten todas las semanas y necesitan mejorar su operación de forma constante.",
+      "Planificación periódica para empresas que reparten todas las semanas y quieren medir mejoras en el tiempo.",
     bestFor:
-      "Ideal si tu empresa tiene rutas frecuentes y quiere medir mejoras mes a mes.",
+      "Para operaciones frecuentes que necesitan control, seguimiento y mejora continua.",
     deliverables: [
       "Optimización periódica",
       "Reportes por jornada",
