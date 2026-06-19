@@ -1331,3 +1331,310 @@ img {
     border-radius: 24px;
   }
 }
+/* =========================================================
+   HOME CLEAN / PREMIUM
+   ========================================================= */
+
+.homePage {
+  overflow: hidden;
+}
+
+.homeHeroClean {
+  padding: 82px 0 72px;
+}
+
+.homeHeroCleanGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.48fr);
+  gap: 76px;
+  align-items: center;
+}
+
+.homeHeroText {
+  max-width: 690px;
+}
+
+.homeHeroText h1 {
+  margin: 0;
+  max-width: 690px;
+  font-size: clamp(2.15rem, 3.7vw, 3.45rem);
+  line-height: 1.06;
+  letter-spacing: -0.048em;
+}
+
+.homeHeroText > p {
+  max-width: 590px;
+  margin: 22px 0 0;
+  color: #b5c0d2;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.homeHeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.homeHint {
+  display: block;
+  max-width: 650px;
+  margin-top: 22px;
+  color: var(--muted-2);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+/* Tarjeta derecha del hero */
+
+.homeResultCard {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.018)),
+    #09111f;
+  box-shadow: 0 24px 75px rgba(0, 0, 0, 0.32);
+}
+
+.homeResultHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.homeResultHeader span {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.homeResultHeader strong {
+  color: var(--text);
+  font-size: 1.35rem;
+  letter-spacing: -0.035em;
+}
+
+.homeResultRows {
+  display: grid;
+  gap: 0;
+  margin-bottom: 22px;
+}
+
+.homeResultRows div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.homeResultRows div:first-child {
+  padding-top: 0;
+}
+
+.homeResultRows span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.homeResultRows strong {
+  color: var(--text);
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.homeResultRows .homeResultHighlight {
+  border-bottom: 0;
+}
+
+.homeResultRows .homeResultHighlight strong {
+  color: var(--green);
+}
+
+/* Sección proceso */
+
+.homeProcessSection {
+  padding: 58px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.homeSectionTitle {
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.homeSectionTitle h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.homeProcessGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.homeProcessGrid article {
+  min-height: 190px;
+  padding: 24px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+}
+
+.homeProcessGrid span {
+  display: inline-flex;
+  margin-bottom: 34px;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.homeProcessGrid h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+}
+
+.homeProcessGrid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+/* CTA final */
+
+.homeFinalCtaSection {
+  padding: 50px 0 76px;
+}
+
+.homeFinalCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(255, 255, 255, 0.018);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+}
+
+.homeFinalCta h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.homeFinalCta p:not(.eyebrow) {
+  max-width: 590px;
+  margin-bottom: 0;
+}
+
+/* Ajuste extra para que títulos antiguos no dominen el home */
+
+.homePage .displayTitle,
+.homePage .homeTitle {
+  font-size: clamp(2.15rem, 3.7vw, 3.45rem);
+  line-height: 1.06;
+  letter-spacing: -0.048em;
+}
+
+/* Responsive home */
+
+@media (max-width: 980px) {
+  .homeHeroClean {
+    padding: 58px 0 52px;
+  }
+
+  .homeHeroCleanGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .homeHeroText {
+    max-width: 720px;
+  }
+
+  .homeHeroText h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .homeProcessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .homeProcessGrid article {
+    min-height: auto;
+  }
+
+  .homeProcessGrid span {
+    margin-bottom: 20px;
+  }
+
+  .homeFinalCta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .homeHeroClean {
+    padding: 44px 0 40px;
+  }
+
+  .homeHeroText h1 {
+    font-size: clamp(1.9rem, 10vw, 2.55rem);
+    letter-spacing: -0.04em;
+  }
+
+  .homeHeroText > p {
+    font-size: 0.96rem;
+  }
+
+  .homeHeroActions {
+    width: 100%;
+  }
+
+  .homeHeroActions .btn {
+    width: 100%;
+  }
+
+  .homeResultCard {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .homeResultRows strong {
+    font-size: 1.35rem;
+  }
+
+  .homeProcessSection {
+    padding: 42px 0;
+  }
+
+  .homeFinalCtaSection {
+    padding: 42px 0 58px;
+  }
+
+  .homeFinalCta {
+    padding: 24px;
+    border-radius: 24px;
+  }
+}
