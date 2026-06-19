@@ -30,15 +30,15 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4>Rutas</h4>
+          <h4>Explorar</h4>
           <Link href="/servicios">Servicios</Link>
-          <Link href="/demo">Ejemplo antes/después</Link>
-          <Link href="/metodologia">Cómo funciona</Link>
+          <Link href="/demo">Ejemplo</Link>
+          <Link href="/dashboard">Entrega</Link>
         </div>
 
         <div>
-          <h4>Entrega</h4>
-          <Link href="/dashboard">Reporte demo</Link>
+          <h4>Proceso</h4>
+          <Link href="/metodologia">Cómo funciona</Link>
           <Link href="/casos">Casos de uso</Link>
           <Link href="/soluciones">Empresas objetivo</Link>
         </div>
