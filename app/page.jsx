@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
-import DashboardMockup from "@/components/DashboardMockup";
 import MetricCard from "@/components/MetricCard";
+import ResultsPreview from "@/components/ResultsPreview";
 import { metrics } from "@/data/metrics";
 
 const whatsappMessage = encodeURIComponent(
@@ -32,9 +32,9 @@ export default function Home() {
             </h1>
 
             <p className="lead">
-              En Navix Labs transformamos una lista de direcciones en rutas
-              ordenadas por chofer, mapa interactivo, Excel operativo y métricas
-              simples para decidir mejor.
+              Transformamos una lista de direcciones en rutas ordenadas por
+              chofer, resumen operativo, Excel claro y métricas simples para
+              tomar decisiones.
             </p>
 
             <div className="heroActions">
@@ -51,18 +51,18 @@ export default function Home() {
               </div>
 
               <div className="statPill">
-                <strong>Excel + mapa</strong>
-                <span>entrega operativa</span>
+                <strong>Excel + resumen</strong>
+                <span>entrega clara</span>
               </div>
 
               <div className="statPill">
-                <strong>-45 km</strong>
-                <span>ahorro en escenario demo</span>
+                <strong>-31%</strong>
+                <span>escenario de referencia</span>
               </div>
             </div>
           </div>
 
-          <DashboardMockup />
+          <ResultsPreview />
         </div>
       </section>
 
@@ -70,35 +70,35 @@ export default function Home() {
         <div className="container">
           <div className="sectionHeader">
             <p className="eyebrow">Qué hacemos</p>
-            <h2>Ordenamos rutas para empresas que reparten o visitan múltiples direcciones.</h2>
+            <h2>Una mejora concreta para empresas que trabajan con rutas.</h2>
             <p>
-              El objetivo es simple: menos vueltas, menos kilómetros, mejor uso
-              de la flota y una operación más clara para el dueño o encargado.
+              Navix Labs está pensado para operaciones reales: reparto local,
+              técnicos en terreno, distribución y múltiples visitas diarias.
             </p>
           </div>
 
           <div className="grid gridThree">
             <article className="card">
-              <h3>Recibimos tus direcciones</h3>
+              <h3>Recibimos tus datos</h3>
               <p>
-                Puedes partir con una planilla, lista de clientes o rutas que ya
-                usan tus choferes.
+                Puedes partir con una planilla de direcciones, lista de clientes
+                o descripción simple de tu operación.
               </p>
             </article>
 
             <article className="card">
-              <h3>Calculamos rutas más eficientes</h3>
+              <h3>Calculamos una mejor ruta</h3>
               <p>
-                Ordenamos visitas y asignaciones para reducir kilómetros,
-                cruces de zona y tiempos muertos.
+                Ordenamos visitas y asignaciones para reducir vueltas, cruces de
+                zona y kilómetros innecesarios.
               </p>
             </article>
 
             <article className="card">
-              <h3>Entregamos un resultado claro</h3>
+              <h3>Entregamos resultado útil</h3>
               <p>
-                Recibes rutas por chofer, mapa, Excel y comparación
-                antes/después.
+                Recibes un resultado claro para operar: resumen, asignación,
+                tabla de trabajo y comparación.
               </p>
             </article>
           </div>
@@ -109,10 +109,10 @@ export default function Home() {
         <div className="container">
           <div className="sectionHeader">
             <p className="eyebrow">Ejemplo rápido</p>
-            <h2>Una muestra simple de lo que se puede medir.</h2>
+            <h2>Indicadores simples que muestran el impacto.</h2>
             <p>
-              El detalle completo está en la sección Ejemplo. En el inicio solo
-              mostramos los indicadores principales.
+              El detalle completo está en la sección Ejemplo. Aquí solo dejamos
+              los números más importantes.
             </p>
           </div>
 
@@ -126,13 +126,6 @@ export default function Home() {
               />
             ))}
           </div>
-
-          <div className="heroActions">
-            <Button href="/demo">Ver ejemplo completo</Button>
-            <Button href="/dashboard" variant="secondary">
-              Ver reporte demo
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -140,16 +133,16 @@ export default function Home() {
         <div className="container">
           <div className="card">
             <p className="eyebrow">Siguiente paso</p>
-            <h2>Envíanos tus datos y vemos si tus rutas pueden mejorar.</h2>
+            <h2>Envíanos tus datos y evaluamos si tus rutas pueden mejorar.</h2>
             <p>
-              Para comenzar necesitamos ciudad, cantidad de vehículos, cantidad
-              aproximada de entregas y si tienes direcciones en Excel.
+              Para comenzar necesitamos ciudad, cantidad de vehículos,
+              entregas aproximadas y principal problema actual.
             </p>
 
             <div className="heroActions">
               <Button href="/contacto">Completar formulario</Button>
-              <Button href={whatsappUrl} variant="secondary" external>
-                Escribir por WhatsApp
+              <Button href="/demo" variant="secondary">
+                Ver ejemplo completo
               </Button>
             </div>
           </div>
