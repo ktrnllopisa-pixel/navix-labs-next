@@ -5,7 +5,7 @@ const navItems = [
   { href: "/servicios", label: "Servicios" },
   { href: "/demo", label: "Ejemplo" },
   { href: "/metodologia", label: "Cómo funciona" },
-  { href: "/dashboard", label: "Reporte" },
+  { href: "/dashboard", label: "Entrega" },
   { href: "/contacto", label: "Contacto" },
 ];
 
