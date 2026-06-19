@@ -24,10 +24,10 @@ export const metadata = {
 
 export default function ServiciosPage() {
   return (
-    <main>
+    <main className="servicesPage">
       <section className="servicesHero">
         <div className="container servicesHeroGrid">
-          <div>
+          <div className="servicesHeroText">
             <p className="eyebrow">Servicios</p>
 
             <h1>
@@ -63,10 +63,12 @@ export default function ServiciosPage() {
                 <strong>Km</strong>
                 <small>recorridos</small>
               </div>
+
               <div>
                 <strong>Tiempo</strong>
                 <small>en terreno</small>
               </div>
+
               <div>
                 <strong>Flota</strong>
                 <small>mejor utilizada</small>
@@ -91,12 +93,12 @@ export default function ServiciosPage() {
           <div className="servicePackageGrid">
             {services.map((service) => (
               <article
+                key={service.title}
                 className={
                   service.tag === "Más solicitado"
                     ? "servicePackage featuredPackage"
                     : "servicePackage"
                 }
-                key={service.title}
               >
                 <span className="packageTag">{service.tag}</span>
 
