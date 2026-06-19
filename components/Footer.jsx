@@ -18,7 +18,7 @@ const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
 export default function Footer() {
   return (
     <footer className="siteFooter">
-      <div className="container footerGrid">
+      <div className="container footerGrid minimalFooterGrid">
         <div>
           <Link href="/" className="footerBrand">
             NAVIX <span>LABS</span>
@@ -33,19 +33,12 @@ export default function Footer() {
           <h4>Explorar</h4>
           <Link href="/servicios">Servicios</Link>
           <Link href="/demo">Ejemplo</Link>
-          <Link href="/dashboard">Entrega</Link>
-        </div>
-
-        <div>
-          <h4>Proceso</h4>
-          <Link href="/metodologia">Cómo funciona</Link>
-          <Link href="/casos">Casos de uso</Link>
-          <Link href="/soluciones">Empresas objetivo</Link>
+          <Link href="/contacto">Contacto</Link>
         </div>
 
         <div>
           <h4>Contacto</h4>
-          <Link href="/contacto">Formulario de diagnóstico</Link>
+          <Link href="/contacto">Formulario</Link>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">
             WhatsApp directo
           </a>
