@@ -1083,3 +1083,251 @@ img {
     font-size: 2.25rem;
   }
 }
+
+/* HOME MINIMAL OVERRIDES */
+
+.homeHero {
+  padding: 74px 0 64px;
+}
+
+.homeHeroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.52fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.homeHeroContent {
+  max-width: 720px;
+}
+
+.homeTitle {
+  max-width: 720px;
+  font-size: clamp(2.25rem, 4.2vw, 3.85rem);
+  line-height: 1.04;
+  letter-spacing: -0.052em;
+}
+
+.homeLead {
+  max-width: 600px;
+  margin-top: 22px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.homeSmallNote {
+  max-width: 560px;
+  margin-top: 22px;
+  color: var(--muted-2);
+  font-size: 0.92rem;
+}
+
+.minimalProofCard {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02)),
+    #09111f;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+.minimalProofEyebrow {
+  margin: 0 0 18px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.minimalProofRows {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.minimalProofRows div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.minimalProofRows div:first-child {
+  padding-top: 0;
+}
+
+.minimalProofRows span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.minimalProofRows strong {
+  color: var(--text);
+  font-size: 1.65rem;
+  letter-spacing: -0.045em;
+}
+
+.minimalProofRows .highlightRow {
+  border-bottom: 0;
+}
+
+.minimalProofRows .highlightRow strong {
+  color: var(--green);
+}
+
+.homeSection {
+  padding: 56px 0;
+}
+
+.homeIntro {
+  max-width: 640px;
+  margin-bottom: 26px;
+}
+
+.homeIntro h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 2.8vw, 2.55rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.miniProcess {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.miniProcess article {
+  padding: 24px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.032);
+}
+
+.miniProcess span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--cyan);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+}
+
+.miniProcess h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.miniProcess p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.simpleCta {
+  max-width: 760px;
+  padding: 34px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow);
+}
+
+.simpleCta h2 {
+  margin: 0;
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.simpleCta p {
+  max-width: 620px;
+}
+
+.minimalFooterGrid {
+  grid-template-columns: 1.7fr 1fr 1fr;
+}
+
+/* Reduce general visual weight */
+
+.card,
+.serviceCard,
+.metricCard,
+.processStep,
+.industryCard,
+.caseCard,
+.contactCard {
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
+}
+
+.metricCard strong {
+  font-size: 2.05rem;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(1.75rem, 3vw, 2.65rem);
+}
+
+/* Responsive minimal home */
+
+@media (max-width: 920px) {
+  .homeHero {
+    padding: 54px 0 48px;
+  }
+
+  .homeHeroGrid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .homeTitle {
+    font-size: clamp(2.05rem, 9vw, 3.1rem);
+    line-height: 1.05;
+  }
+
+  .miniProcess {
+    grid-template-columns: 1fr;
+  }
+
+  .minimalFooterGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .homeHero {
+    padding: 44px 0 40px;
+  }
+
+  .homeTitle {
+    font-size: clamp(1.95rem, 10vw, 2.65rem);
+    letter-spacing: -0.042em;
+  }
+
+  .homeLead {
+    font-size: 0.96rem;
+  }
+
+  .minimalProofCard {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .minimalProofRows strong {
+    font-size: 1.42rem;
+  }
+
+  .homeSection {
+    padding: 42px 0;
+  }
+
+  .simpleCta {
+    padding: 24px;
+    border-radius: 24px;
+  }
+}
