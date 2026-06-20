@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Casos de optimización de rutas, ahorro y flotas en Chile",
+  description:
+    "Ejemplos de optimización de rutas para empresas chilenas con comparación antes y después: kilómetros, tiempos, choferes, entregas, utilización de flota y ahorro estimado.",
+  alternates: {
+    canonical: "/casos",
+  },
+};
+
 import Button from "@/components/Button";
 
 const cases = [
