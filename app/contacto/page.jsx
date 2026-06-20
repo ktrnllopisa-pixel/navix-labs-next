@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Solicitar diagnóstico de rutas para empresas en Chile",
+  description:
+    "Contacta a Navix Labs para evaluar rutas de reparto, cantidad de vehículos, direcciones, horarios de atención, carga y restricciones operativas.",
+  alternates: {
+    canonical: "/contacto",
+  },
+};
+
 import Button from "@/components/Button";
 import ContactForm from "@/components/ContactForm";
 
