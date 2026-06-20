@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Optimización de rutas de reparto para empresas en Chile",
+  description:
+    "Optimiza rutas de reparto en Chile con Navix Labs. Ordenamos clientes por chofer, reducimos kilómetros, mejoramos tiempos y entregamos Excel operativo, mapa y métricas claras.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
 import Button from "@/components/Button";
 
 const whatsappMessage = encodeURIComponent(
