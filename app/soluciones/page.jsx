@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Soluciones para reparto, flotas y logística urbana en Chile",
+  description:
+    "Soluciones de optimización de rutas para distribuidoras, empresas de reparto, fletes, técnicos en terreno y operaciones con múltiples direcciones en Chile.",
+  alternates: {
+    canonical: "/soluciones",
+  },
+};
+
 import Button from "@/components/Button";
 import { industries } from "@/data/industries";
 
