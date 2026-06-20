@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Servicios de optimización logística y rutas de reparto en Chile",
+  description:
+    "Diagnóstico express, optimización de jornada y planificación logística para empresas en Chile con reparto, flotas, fletes, distribución y visitas en terreno.",
+  alternates: {
+    canonical: "/servicios",
+  },
+};
+
 import Button from "@/components/Button";
 import { services } from "@/data/services";
 
