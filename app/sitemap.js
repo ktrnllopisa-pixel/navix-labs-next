@@ -37,3 +37,5 @@ export default function sitemap() {
         : 0.6,
   }));
 }
+
+// force redeploy
