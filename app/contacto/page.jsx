@@ -1,14 +1,38 @@
+import Button from "@/components/Button";
+import ContactForm from "@/components/ContactForm";
+
 export const metadata = {
   title: "Solicitar diagnóstico de rutas para empresas en Chile",
   description:
-    "Contacta a Navix Labs para evaluar rutas de reparto, cantidad de vehículos, direcciones, horarios de atención, carga y restricciones operativas.",
+    "Contacta a Navix Labs para evaluar rutas de reparto, cantidad de vehículos, direcciones, horarios de atención, carga, flota y restricciones operativas.",
   alternates: {
-    canonical: "/contacto",
+    canonical: "https://navixlabs.cl/contacto",
+  },
+  openGraph: {
+    title: "Solicitar diagnóstico de rutas | Navix Labs",
+    description:
+      "Solicita una evaluación de rutas para detectar oportunidades de ahorro en kilómetros, tiempos, flota y planificación de reparto.",
+    url: "https://navixlabs.cl/contacto",
+    siteName: "Navix Labs",
+    locale: "es_CL",
+    type: "website",
+    images: [
+      {
+        url: "/navix-logo.png.png",
+        width: 1200,
+        height: 630,
+        alt: "Navix Labs - Diagnóstico de rutas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solicitar diagnóstico de rutas | Navix Labs",
+    description:
+      "Evalúa tus rutas de reparto, flota, horarios, entregas y oportunidades de mejora operativa.",
+    images: ["/navix-logo.png.png"],
   },
 };
-
-import Button from "@/components/Button";
-import ContactForm from "@/components/ContactForm";
 
 const whatsappMessage = encodeURIComponent(
   `Hola Navix Labs, quiero solicitar un diagnóstico de rutas.
@@ -24,12 +48,6 @@ Principal problema actual:`
 );
 
 const whatsappUrl = `https://wa.me/56973860127?text=${whatsappMessage}`;
-
-export const metadata = {
-  title: "Diagnóstico de rutas | Navix Labs",
-  description:
-    "Solicita un diagnóstico de rutas para evaluar kilómetros, horarios, flota, entregas y oportunidades de mejora operativa.",
-};
 
 export default function ContactoPage() {
   return (
